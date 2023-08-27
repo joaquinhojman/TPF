@@ -13,3 +13,6 @@ Trabajo practico profesional FIUBA
 - rustworkx: https://github.com/Qiskit/rustworkx. Networkx like library with Python bindings implemented in Rust. It lacks the majority of algorithms.
 - cugraph: https://github.com/rapidsai/cugraph. GPU accelerated graph analytics (CUDA).
 - graph-tool (maybe legacy): https://github.com/antmd/graph-tool. Uses OpenMPI
+
+## Benchmarks
+TODO: Memory/CPU profile Rustworkx and Networkx on some common algorithms (Centrality, Shortests Paths, etc) and compare. 
