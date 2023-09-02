@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8" .="">
+<title>nx_betweenness</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="nx_betweenness_files/snakeviz.css" rel="stylesheet">
+<!-- DataTables CSS -->
+<link href="nx_betweenness_files/jquery.dataTables.min.css" rel="stylesheet">
+</head>
+<body>
+<h1 id="snakeviz-text">
+<a href="https://jiffyclub.github.io/snakeviz/">SnakeViz</a>
+</h1>
+<!-- reset button -->
+<span id="resetbuttons">
+<div class="button-div">
+<button id="resetbutton-root" disabled="True">Reset Root</button>
+</div>
+<div class="button-div">
+<button id="resetbutton-zoom" disabled="True">Reset Zoom</button>
+</div>
+</span>
+<!-- style select -->
+<label id="sv-style-label">Style:&nbsp;
+<select name="sv-style" id="sv-style-select">
+<option value="icicle" selected="selected">Icicle</option>
+<option value="sunburst">Sunburst</option>
+</select>
+</label>
+<!-- depth select -->
+<label id="sv-depth-label">Depth:&nbsp;
+<select name="sv-depth" id="sv-depth-select">
+
+<option value="3">3</option>
+
+<option value="5">5</option>
+
+<option value="10" selected="selected">10</option>
+
+<option value="15">15</option>
+
+<option value="20">20</option>
+
+</select>
+</label>
+<!-- cutoff select -->
+<label id="sv-cutoff-label">Cutoff:
+<select name="sv-cutoff" id="sv-cutoff-select">
+<option value="0.001" selected="selected">1 ⁄ 1000</option>
+<option value="0.01">1 ⁄ 100</option>
+<option value="0">None</option>
+</select>
+</label>
+<!-- information div -->
+<div id="sv-info-div" class="icicle" style="height: 450.6px; width: 200px; display: none;"><div class="sv-info-label">Name:</div>
+<div class="sv-info-item">_single_source_shortest_path_basic</div>
+<div class="sv-info-label">Cumulative Time:</div>
+<div class="sv-info-item">21.8 s (86.56 %)</div>
+<div class="sv-info-label">File:</div>
+<div class="sv-info-item">betweenness.py</div>
+<div class="sv-info-label">Line:</div>
+<div class="sv-info-item">256</div>
+<div class="sv-info-label">Directory:</div>
+<div class="sv-info-item">/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/</div></div>
+<!-- call stack -->
+<div id="sv-call-stack">
+<div id="working-spinner" class="spinner" style="display: none;">
+<div class="bounce1"></div>
+<div class="bounce2"></div>
+<div class="bounce3"></div>
+</div>
+<div style="display: inline-block;">
+<button id="sv-call-stack-btn">Call Stack</button>
+</div>
+<div id="sv-call-stack-list"><div><span>0.&nbsp;</span><span>cProfile.py:106(runcall)</span></div></div>
+</div>
+<!-- Error message -->
+<div id="sv-error-div" class="sv-error-msg">
+<p>
+An error occurred processing your profile.
+You can try a lower depth, a larger cutoff,
+or try profiling a smaller portion of your code.
+If you continue to have problems you can
+<a href="https://github.com/jiffyclub/snakeviz/issues">
+contact us on GitHub</a>.
+</p>
+<div id="sv-error-close-div" class="sv-error-close">Close</div>
+</div>
+<!-- vis -->
+<div style="text-align: center;">
+<div id="chart" style="margin-left: auto; margin-right: auto;"><svg width="1080" height="600.8000000000001"><g id="container" transform="translate(90,60)"><rect id="path-0" x="0" y="0" width="990" height="54.08000000000001" fill-rule="evenodd" fill="#3182bd" style="fill: rgb(49, 130, 189);"></rect><rect id="path-1" x="0" y="54.08000000000001" width="989.9996680518487" height="54.08000000000001" fill-rule="evenodd" fill="#6baed6" style="fill: rgb(107, 174, 214);"></rect><rect id="path-2" x="0" y="108.16000000000003" width="989.9968317655629" height="54.08000000000001" fill-rule="evenodd" fill="#9ecae1" style="fill: rgb(158, 202, 225);"></rect><rect id="path-3" x="856.9342062057133" y="162.24" width="127.08220667452481" height="54.08000000000001" fill-rule="evenodd" fill="#c6dbef"></rect><rect id="path-4" x="981.04834408394" y="216.32000000000005" width="2.96806879629807" height="54.08000000000001" fill-rule="evenodd" fill="#e6550d"></rect><rect id="path-5" x="981.04834408394" y="270.40000000000003" width="2.948150174631715" height="54.08000000000001" fill-rule="evenodd" fill="#e6550d"></rect><rect id="path-6" x="978.0279775455019" y="216.32000000000005" width="3.0203665384381657" height="54.08000000000001" fill-rule="evenodd" fill="#fd8d3c"></rect><rect id="path-7" x="856.9342062057133" y="216.32000000000005" width="121.09377133978859" height="54.08000000000001" fill-rule="evenodd" fill="#c6dbef"></rect><rect id="path-8" x="0" y="162.24" width="856.9342062057133" height="54.08000000000001" fill-rule="evenodd" fill="#fdae6b" style="fill: rgb(253, 174, 107);"></rect><rect id="path-9" x="850.622867145176" y="216.32000000000005" width="3.5697477773273913" height="54.08000000000001" fill-rule="evenodd" fill="#fdd0a2"></rect><rect id="path-10" x="846.2867130265203" y="216.32000000000005" width="4.336154118655754" height="54.08000000000001" fill-rule="evenodd" fill="#31a354"></rect><rect id="path-11" x="854.1926149225034" y="216.32000000000005" width="2.7415912832098255" height="54.08000000000001" fill-rule="evenodd" fill="#e6550d"></rect><rect id="path-12" x="854.1926149225034" y="270.40000000000003" width="2.72167266154347" height="54.08000000000001" fill-rule="evenodd" fill="#e6550d"></rect><rect id="path-13" x="782.5563333062208" y="216.32000000000005" width="47.70793549222242" height="54.08000000000001" fill-rule="evenodd" fill="#74c476"></rect><rect id="path-14" x="699.3418656740647" y="216.32000000000005" width="83.2144676321561" height="54.08000000000001" fill-rule="evenodd" fill="#a1d99b"></rect><rect id="path-15" x="731.1668684852586" y="270.40000000000003" width="25.71908259903281" height="54.08000000000001" fill-rule="evenodd" fill="#c7e9c0"></rect><rect id="path-16" x="749.4955974683259" y="324.48" width="7.390353615965552" height="54.08000000000001" fill-rule="evenodd" fill="#756bb1"></rect><rect id="path-17" x="731.1668684852586" y="324.48" width="18.328728983067258" height="54.08000000000001" fill-rule="evenodd" fill="#c7e9c0"></rect><rect id="path-18" x="699.3418656740647" y="270.40000000000003" width="31.82500281119399" height="54.08000000000001" fill-rule="evenodd" fill="#9e9ac8"></rect><rect id="path-19" x="724.5648835382192" y="324.48" width="6.601984947039549" height="54.08000000000001" fill-rule="evenodd" fill="#756bb1"></rect><rect id="path-20" x="699.3418656740647" y="324.48" width="25.223017864154436" height="54.08000000000001" fill-rule="evenodd" fill="#9e9ac8"></rect><rect id="path-21" x="756.8859510842915" y="270.40000000000003" width="25.670382221929305" height="54.08000000000001" fill-rule="evenodd" fill="#a1d99b"></rect><rect id="path-22" x="830.2642687984433" y="216.32000000000005" width="16.02244422807702" height="54.08000000000001" fill-rule="evenodd" fill="#bcbddc"></rect><rect id="path-23" x="841.6111768111842" y="270.40000000000003" width="4.67553621533604" height="54.08000000000001" fill-rule="evenodd" fill="#dadaeb"></rect><rect id="path-24" x="830.2642687984433" y="270.40000000000003" width="11.346908012740979" height="54.08000000000001" fill-rule="evenodd" fill="#bcbddc"></rect><rect id="path-25" x="0" y="216.32000000000005" width="699.3418656740647" height="54.08000000000001" fill-rule="evenodd" fill="#fdae6b" style="fill: rgb(253, 174, 107);"></rect><rect id="path-26" x="984.0164128802381" y="162.24" width="5.9804188853247355" height="54.08000000000001" fill-rule="evenodd" fill="#9ecae1" style="fill: rgb(158, 202, 225);"></rect><text x="495" y="27.040000000000006" width="990" height="54.08000000000001" font-family="sans-serif" font-size="15px" fill="black" text-anchor="middle" pointer-events="none"><tspan text-anchor="middle" x="495">cProfile.py:106(runcall)</tspan><tspan text-anchor="middle" x="495" dy="1.2em">25.1 s</tspan></text><text x="494.9998340259244" y="81.12" width="989.9996680518487" height="54.08000000000001" font-family="sans-serif" font-size="15px" fill="black" text-anchor="middle" pointer-events="none"><tspan text-anchor="middle" x="494.9998340259244">&lt;class 'networkx.utils.decorators.argmap'&gt; compilation 8:1(argmap_betweenness_centrality_5)</tspan><tspan text-anchor="middle" x="494.9998340259244" dy="1.2em">25.1 s</tspan></text><text x="494.99841588278144" y="135.20000000000002" width="989.9968317655629" height="54.08000000000001" font-family="sans-serif" font-size="15px" fill="black" text-anchor="middle" pointer-events="none"><tspan text-anchor="middle" x="494.99841588278144">betweenness.py:14(betweenness_centrality)</tspan><tspan text-anchor="middle" x="494.99841588278144" dy="1.2em">25.1 s</tspan></text><text x="428.46710310285664" y="189.28" width="856.9342062057133" height="54.08000000000001" font-family="sans-serif" font-size="15px" fill="black" text-anchor="middle" pointer-events="none"><tspan text-anchor="middle" x="428.46710310285664">betweenness.py:256(_single_source_shortest_path_basic)</tspan><tspan text-anchor="middle" x="428.46710310285664" dy="1.2em">21.8 s</tspan></text><text x="349.67093283703235" y="243.36000000000004" width="699.3418656740647" height="54.08000000000001" font-family="sans-serif" font-size="15px" fill="black" text-anchor="middle" pointer-events="none"><tspan text-anchor="middle" x="349.67093283703235">betweenness.py:256(_single_source_shortest_path_basic)</tspan><tspan text-anchor="middle" x="349.67093283703235" dy="1.2em">21.8 s</tspan></text></g></svg></div>
+</div>
+<br>
+<!-- stats table -->
+<div id="table_div">
+<div id="pstats-table_wrapper" class="dataTables_wrapper no-footer"><div id="pstats-table_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="pstats-table"></label></div><table class="display dataTable no-footer" id="pstats-table" role="grid" aria-describedby="pstats-table_info" style="width: 1387px;" cellspacing="0" cellpadding="0" border="0">
+<thead>
+<tr role="row"><th title="Total number of calls to the function. If there are two numbers, that means the function recursed and the first is the total number of calls and the second is the number of primitive (non-recursive) calls." class="sorting" tabindex="0" aria-controls="pstats-table" rowspan="1" colspan="1" style="width: 68px;" aria-label="ncalls: activate to sort column ascending">ncalls</th><th title="Total time spent in the function, not including time spent in calls to sub-functions." class="sorting_desc" tabindex="0" aria-controls="pstats-table" rowspan="1" colspan="1" style="width: 73px;" aria-sort="descending" aria-label="tottime: activate to sort column ascending">tottime</th><th title="`tottime` divided by `ncalls`" class="sorting" tabindex="0" aria-controls="pstats-table" rowspan="1" colspan="1" style="width: 70px;" aria-label="percall: activate to sort column ascending">percall</th><th title="Cumulative time spent in this function and all sub-functions." class="sorting" tabindex="0" aria-controls="pstats-table" rowspan="1" colspan="1" style="width: 87px;" aria-label="cumtime: activate to sort column ascending">cumtime</th><th title="`cumtime` divided by `ncalls`" class="sorting" tabindex="0" aria-controls="pstats-table" rowspan="1" colspan="1" style="width: 70px;" aria-label="percall: activate to sort column ascending">percall</th><th title="File name and line number were the function is defined, and the function’s name." class="sorting" tabindex="0" aria-controls="pstats-table" rowspan="1" colspan="1" style="width: 803px;" aria-label="filename:lineno(function): activate to sort column ascending">filename:lineno(function)</th></tr>
+</thead>
+<tbody><tr role="row" class="odd"><td class="">1514</td><td class="sorting_1">17.76</td><td class="">0.01173</td><td class="">21.76</td><td class="">0.01437</td><td class="">betweenness.py:256(_single_source_shortest_path_basic)</td></tr><tr role="row" class="even"><td class="">1514</td><td class="sorting_1">3.075</td><td class="">0.002031</td><td class="">3.227</td><td class="">0.002132</td><td class="">betweenness.py:317(_accumulate_basic)</td></tr><tr role="row" class="odd"><td>28383984</td><td class="sorting_1">1.212</td><td>4.268e-08</td><td>1.212</td><td>4.268e-08</td><td>~:0(&lt;method 'append' of 'list' objects&gt;)</td></tr><tr role="row" class="even"><td>2280108</td><td class="sorting_1">0.6519</td><td>2.859e-07</td><td>2.113</td><td>9.268e-07</td><td>graph.py:452(__getitem__)</td></tr><tr role="row" class="odd"><td>2280108</td><td class="sorting_1">0.6406</td><td>2.809e-07</td><td>0.8082</td><td>3.545e-07</td><td>coreviews.py:81(__getitem__)</td></tr><tr role="row" class="even"><td>2280108</td><td class="sorting_1">0.4655</td><td>2.041e-07</td><td>0.6531</td><td>2.865e-07</td><td>graph.py:338(adj)</td></tr><tr role="row" class="odd"><td>4560216</td><td class="sorting_1">0.3553</td><td>7.792e-08</td><td>0.3553</td><td>7.792e-08</td><td>coreviews.py:44(__init__)</td></tr><tr role="row" class="even"><td class="">2280108</td><td class="sorting_1">0.2882</td><td class="">1.264e-07</td><td class="">0.4069</td><td class="">1.785e-07</td><td class="">coreviews.py:50(__iter__)</td></tr><tr role="row" class="odd"><td>1</td><td class="sorting_1">0.1519</td><td>0.1519</td><td>25.14</td><td>25.14</td><td>betweenness.py:14(betweenness_centrality)</td></tr><tr role="row" class="even"><td>3029</td><td class="sorting_1">0.1446</td><td>4.773e-05</td><td>0.1451</td><td>4.79e-05</td><td>~:0(&lt;built-in method fromkeys&gt;)</td></tr><tr role="row" class="odd"><td>2283138</td><td class="sorting_1">0.119</td><td>5.212e-08</td><td>0.119</td><td>5.212e-08</td><td>~:0(&lt;built-in method builtins.iter&gt;)</td></tr><tr role="row" class="even"><td class="">2280108</td><td class="sorting_1">0.1101</td><td class="">4.83e-08</td><td class="">0.1101</td><td class="">4.83e-08</td><td class="">~:0(&lt;method 'popleft' of 'collections.deque' objects&gt;)</td></tr><tr role="row" class="odd"><td>2278594</td><td class="sorting_1">0.09066</td><td>3.979e-08</td><td>0.09066</td><td>3.979e-08</td><td>~:0(&lt;method 'append' of 'collections.deque' objects&gt;)</td></tr><tr role="row" class="even"><td class="">2280108</td><td class="sorting_1">0.0767</td><td class="">3.364e-08</td><td class="">0.0767</td><td class="">3.364e-08</td><td class="">~:0(&lt;method 'pop' of 'list' objects&gt;)</td></tr><tr role="row" class="odd"><td class="">3030</td><td class="sorting_1">0.0008748</td><td class="">2.887e-07</td><td class="">0.001133</td><td class="">3.741e-07</td><td class="">graph.py:398(__iter__)</td></tr><tr role="row" class="even"><td class="">1</td><td class="sorting_1">9.121e-05</td><td class="">9.121e-05</td><td class="">9.121e-05</td><td class="">9.121e-05</td><td class="">betweenness.py:359(_rescale)</td></tr><tr role="row" class="odd"><td class="">1</td><td class="sorting_1">7.203e-05</td><td class="">7.203e-05</td><td class="">25.14</td><td class="">25.14</td><td class="">&lt;class 'networkx.utils.decorators.argmap'&gt; compilation 8:1(argmap_betweenness_centrality_5)</td></tr><tr role="row" class="even"><td class="">1</td><td class="sorting_1">8.43e-06</td><td class="">8.43e-06</td><td class="">25.14</td><td class="">25.14</td><td class="">cProfile.py:106(runcall)</td></tr><tr role="row" class="odd"><td class="">1</td><td class="sorting_1">8.04e-06</td><td class="">8.04e-06</td><td class="">8.51e-06</td><td class="">8.51e-06</td><td class="">misc.py:560(create_py_random_state)</td></tr><tr role="row" class="even"><td class="">2/1</td><td class="sorting_1">1.3e-06</td><td class="">1.3e-06</td><td class="">2.2e-06</td><td class="">2.2e-06</td><td class="">~:0(&lt;built-in method builtins.len&gt;)</td></tr><tr role="row" class="odd"><td class="">1</td><td class="sorting_1">9e-07</td><td class="">9e-07</td><td class="">1.22e-06</td><td class="">1.22e-06</td><td class="">graph.py:430(__len__)</td></tr><tr role="row" class="even"><td class="">1</td><td class="sorting_1">7.8e-07</td><td class="">7.8e-07</td><td class="">7.8e-07</td><td class="">7.8e-07</td><td class="">~:0(&lt;method 'disable' of '_lsprof.Profiler' objects&gt;)</td></tr><tr role="row" class="odd"><td class="">2</td><td class="sorting_1">4.7e-07</td><td class="">2.35e-07</td><td class="">4.7e-07</td><td class="">2.35e-07</td><td class="">~:0(&lt;built-in method builtins.isinstance&gt;)</td></tr><tr role="row" class="even"><td class="">1</td><td class="sorting_1">3.4e-07</td><td class="">3.4e-07</td><td class="">3.4e-07</td><td class="">3.4e-07</td><td class="">graph.py:1458(is_directed)</td></tr><tr role="row" class="odd"><td class="">1</td><td class="sorting_1">2.7e-07</td><td class="">2.7e-07</td><td class="">2.7e-07</td><td class="">2.7e-07</td><td class="">~:0(&lt;method 'enable' of '_lsprof.Profiler' objects&gt;)</td></tr></tbody></table><div class="dataTables_info" id="pstats-table_info" role="status" aria-live="polite">Showing 1 to 25 of 25 entries</div></div>
+</div>
+<!-- footer -->
+<footer class="sv-footer">
+<a class="footer-link" href="https://jiffyclub.github.io/snakeviz/">SnakeViz Docs</a>
+</footer>
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- Vendor JS -->
+<script src="nx_betweenness_files/jquery-3.2.1.min.js"></script>
+<script src="nx_betweenness_files/d3.v3.min.js"></script>
+<script src="nx_betweenness_files/jquery.dataTables.min.js"></script>
+<script src="nx_betweenness_files/lodash.min.js"></script>
+<script src="nx_betweenness_files/immutable.min.js"></script>
+<!-- SnakeViz JS -->
+<script>
+// Make the stats table
+var table_data = [[['2', 2], '4.7e-07', '2.35e-07', '4.7e-07', '2.35e-07', '~:0(&lt;built-in method builtins.isinstance&gt;)', '~:0(<built-in method builtins.isinstance>)'], [['2283138', 2283138], '0.119', '5.212e-08', '0.119', '5.212e-08', '~:0(&lt;built-in method builtins.iter&gt;)', '~:0(<built-in method builtins.iter>)'], [['2/1', 2], '1.3e-06', '1.3e-06', '2.2e-06', '2.2e-06', '~:0(&lt;built-in method builtins.len&gt;)', '~:0(<built-in method builtins.len>)'], [['2278594', 2278594], '0.09066', '3.979e-08', '0.09066', '3.979e-08', '~:0(&lt;method &#39;append&#39; of &#39;collections.deque&#39; objects&gt;)', "~:0(<method 'append' of 'collections.deque' objects>)"], [['2280108', 2280108], '0.1101', '4.83e-08', '0.1101', '4.83e-08', '~:0(&lt;method &#39;popleft&#39; of &#39;collections.deque&#39; objects&gt;)', "~:0(<method 'popleft' of 'collections.deque' objects>)"], [['3029', 3029], '0.1446', '4.773e-05', '0.1451', '4.79e-05', '~:0(&lt;built-in method fromkeys&gt;)', '~:0(<built-in method fromkeys>)'], [['28383984', 28383984], '1.212', '4.268e-08', '1.212', '4.268e-08', '~:0(&lt;method &#39;append&#39; of &#39;list&#39; objects&gt;)', "~:0(<method 'append' of 'list' objects>)"], [['2280108', 2280108], '0.0767', '3.364e-08', '0.0767', '3.364e-08', '~:0(&lt;method &#39;pop&#39; of &#39;list&#39; objects&gt;)', "~:0(<method 'pop' of 'list' objects>)"], [['1', 1], '9.121e-05', '9.121e-05', '9.121e-05', '9.121e-05', 'betweenness.py:359(_rescale)', '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:359(_rescale)'], [['1514', 1514], '3.075', '0.002031', '3.227', '0.002132', 'betweenness.py:317(_accumulate_basic)', '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:317(_accumulate_basic)'], [['1514', 1514], '17.76', '0.01173', '21.76', '0.01437', 'betweenness.py:256(_single_source_shortest_path_basic)', '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)'], [['1', 1], '0.1519', '0.1519', '25.14', '25.14', 'betweenness.py:14(betweenness_centrality)', '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)'], [['1', 1], '8.04e-06', '8.04e-06', '8.51e-06', '8.51e-06', 'misc.py:560(create_py_random_state)', '/home/leonardo/.local/lib/python3.10/site-packages/networkx/utils/misc.py:560(create_py_random_state)'], [['2280108', 2280108], '0.4655', '2.041e-07', '0.6531', '2.865e-07', 'graph.py:338(adj)', '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:338(adj)'], [['3030', 3030], '0.0008748', '2.887e-07', '0.001133', '3.741e-07', 'graph.py:398(__iter__)', '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:398(__iter__)'], [['1', 1], '9e-07', '9e-07', '1.22e-06', '1.22e-06', 'graph.py:430(__len__)', '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:430(__len__)'], [['2280108', 2280108], '0.6519', '2.859e-07', '2.113', '9.268e-07', 'graph.py:452(__getitem__)', '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:452(__getitem__)'], [['1', 1], '3.4e-07', '3.4e-07', '3.4e-07', '3.4e-07', 'graph.py:1458(is_directed)', '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:1458(is_directed)'], [['4560216', 4560216], '0.3553', '7.792e-08', '0.3553', '7.792e-08', 'coreviews.py:44(__init__)', '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:44(__init__)'], [['2280108', 2280108], '0.2882', '1.264e-07', '0.4069', '1.785e-07', 'coreviews.py:50(__iter__)', '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:50(__iter__)'], [['2280108', 2280108], '0.6406', '2.809e-07', '0.8082', '3.545e-07', 'coreviews.py:81(__getitem__)', '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:81(__getitem__)'], [['1', 1], '8.43e-06', '8.43e-06', '25.14', '25.14', 'cProfile.py:106(runcall)', '/opt/miniconda3/lib/python3.10/cProfile.py:106(runcall)'], [['1', 1], '7.203e-05', '7.203e-05', '25.14', '25.14', '&lt;class &#39;networkx.utils.decorators.argmap&#39;&gt; compilation 8:1(argmap_betweenness_centrality_5)', "<class 'networkx.utils.decorators.argmap'> compilation 8:1(argmap_betweenness_centrality_5)"], [['1', 1], '2.7e-07', '2.7e-07', '2.7e-07', '2.7e-07', '~:0(&lt;method &#39;enable&#39; of &#39;_lsprof.Profiler&#39; objects&gt;)', "~:0(<method 'enable' of '_lsprof.Profiler' objects>)"], [['1', 1], '7.8e-07', '7.8e-07', '7.8e-07', '7.8e-07', '~:0(&lt;method &#39;disable&#39; of &#39;_lsprof.Profiler&#39; objects&gt;)', "~:0(<method 'disable' of '_lsprof.Profiler' objects>)"]];
+$(document).ready(function() {
+var table = $('#pstats-table').dataTable({
+'data': table_data,
+'columns': [
+// Note: columns are also defined in #pstats-table in HTML above,
+// this list must line up with that.
+{'type': 'num', 'searchable': 'false',
+'data': {
+'_': function (row) {return row[0][0];},
+'sort': function (row) {return row[0][1]}
+}},
+{'type': 'num', 'searchable': 'false'},
+{'type': 'num', 'searchable': 'false'},
+{'type': 'num', 'searchable': 'false'},
+{'type': 'num', 'searchable': 'false'},
+{}
+],
+'order': [1, 'desc'],
+'paging': false
+}).api();
+$('#pstats-table tbody').on('click', 'tr', function() {
+var name = table.row(this).data()[6];
+sv_root_func_name = name;
+sv_draw_vis(name);
+sv_call_stack = [name];
+sv_update_call_stack_list();
+$('#resetbutton-zoom').prop('disabled', true);
+$('#resetbutton-root').prop('disabled', false);
+}).on('mouseenter', 'tr', function () {
+$(this).children('td').addClass('data-table-hover');
+}).on('mouseleave', 'tr', function () {
+$(this).children('td').removeClass('data-table-hover');
+});
+});
+</script>
+<!-- Web worker code for generating D3 JSON in a separate thread -->
+<script id="hierarchy-worker" type="javascript/worker">
+// This will all go into a web worker that will be used to generate
+// the visualization JSON while leaving the rest of the app responsive.
+//
+// We put this here instead of in a separate JS file so that the worker
+// can be stopped and restarted without loading the code from the server,
+// and so that the stats data can be embedded in the worker.
+var stats = {'~:0(<built-in method builtins.isinstance>)': {'children': {}, 'stats': [2, 2, 4.7000000000000005e-07, 4.7000000000000005e-07], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/utils/misc.py:560(create_py_random_state)': [2, 2, 4.7000000000000005e-07, 4.7000000000000005e-07]}, 'display_name': '~:0(<built-in method builtins.isinstance>)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/utils/misc.py:560(create_py_random_state)': {'children': {'~:0(<built-in method builtins.isinstance>)': [2, 2, 4.7000000000000005e-07, 4.7000000000000005e-07]}, 'stats': [1, 1, 8.040000000000001e-06, 8.51e-06], 'callers': {"<class 'networkx.utils.decorators.argmap'> compilation 8:1(argmap_betweenness_centrality_5)": [1, 1, 8.040000000000001e-06, 8.51e-06]}, 'display_name': 'misc.py:560(create_py_random_state)'}, '~:0(<built-in method builtins.iter>)': {'children': {}, 'stats': [2283138, 2283138, 0.11899630000000001, 0.11899630000000001], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:398(__iter__)': [3030, 3030, 0.000258569, 0.000258569], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:50(__iter__)': [2280108, 2280108, 0.11873773100000001, 0.11873773100000001]}, 'display_name': '~:0(<built-in method builtins.iter>)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:398(__iter__)': {'children': {'~:0(<built-in method builtins.iter>)': [3030, 3030, 0.000258569, 0.000258569]}, 'stats': [3030, 3030, 0.000874848, 0.001133417], 'callers': {'~:0(<built-in method fromkeys>)': [1515, 1515, 0.000384145, 0.0005058440000000001], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [1514, 1514, 0.0004904730000000001, 0.000627253], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1, 1, 2.3000000000000002e-07, 3.2e-07]}, 'display_name': 'graph.py:398(__iter__)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:50(__iter__)': {'children': {'~:0(<built-in method builtins.iter>)': [2280108, 2280108, 0.11873773100000001, 0.11873773100000001]}, 'stats': [2280108, 2280108, 0.28816076900000004, 0.40689850000000005], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [2280108, 2280108, 0.28816076900000004, 0.40689850000000005]}, 'display_name': 'coreviews.py:50(__iter__)'}, '~:0(<built-in method builtins.len>)': {'children': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:430(__len__)': [1, 1, 9.000000000000001e-07, 1.2200000000000002e-06]}, 'stats': [1, 2, 1.3e-06, 2.2e-06], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1, 1, 9.800000000000001e-07, 2.2e-06], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:430(__len__)': [1, 1, 3.2e-07, 3.2e-07]}, 'display_name': '~:0(<built-in method builtins.len>)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': {'children': {'~:0(<built-in method builtins.len>)': [1, 1, 9.800000000000001e-07, 2.2e-06], '~:0(<built-in method fromkeys>)': [1, 1, 7.480900000000001e-05, 7.6829e-05], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:359(_rescale)': [1, 1, 9.1209e-05, 9.1209e-05], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:317(_accumulate_basic)': [1514, 1514, 3.0752407820000003, 3.2273202850000002], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [1514, 1514, 17.760158942, 21.762927570000002], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:398(__iter__)': [1, 1, 2.3000000000000002e-07, 3.2e-07], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:1458(is_directed)': [1, 1, 3.4000000000000003e-07, 3.4000000000000003e-07]}, 'stats': [1, 1, 0.151875921, 25.142294674000002], 'callers': {"<class 'networkx.utils.decorators.argmap'> compilation 8:1(argmap_betweenness_centrality_5)": [1, 1, 0.151875921, 25.142294674000002]}, 'display_name': 'betweenness.py:14(betweenness_centrality)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:430(__len__)': {'children': {'~:0(<built-in method builtins.len>)': [1, 1, 3.2e-07, 3.2e-07]}, 'stats': [1, 1, 9.000000000000001e-07, 1.2200000000000002e-06], 'callers': {'~:0(<built-in method builtins.len>)': [1, 1, 9.000000000000001e-07, 1.2200000000000002e-06]}, 'display_name': 'graph.py:430(__len__)'}, "~:0(<method 'append' of 'collections.deque' objects>)": {'children': {}, 'stats': [2278594, 2278594, 0.090655645, 0.090655645], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [2278594, 2278594, 0.090655645, 0.090655645]}, 'display_name': "~:0(<method 'append' of 'collections.deque' objects>)"}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': {'children': {"~:0(<method 'append' of 'collections.deque' objects>)": [2278594, 2278594, 0.090655645, 0.090655645], "~:0(<method 'popleft' of 'collections.deque' objects>)": [2280108, 2280108, 0.11011894200000001, 0.11011894200000001], '~:0(<built-in method fromkeys>)': [1514, 1514, 0.069120346, 0.06962417], "~:0(<method 'append' of 'list' objects>)": [28383984, 28383984, 1.211568417, 1.211568417], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:398(__iter__)': [1514, 1514, 0.0004904730000000001, 0.000627253], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:452(__getitem__)': [2280108, 2280108, 0.651913021, 2.113275701], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:50(__iter__)': [2280108, 2280108, 0.28816076900000004, 0.40689850000000005]}, 'stats': [1514, 1514, 17.760158942, 21.762927570000002], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1514, 1514, 17.760158942, 21.762927570000002]}, 'display_name': 'betweenness.py:256(_single_source_shortest_path_basic)'}, "~:0(<method 'popleft' of 'collections.deque' objects>)": {'children': {}, 'stats': [2280108, 2280108, 0.11011894200000001, 0.11011894200000001], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [2280108, 2280108, 0.11011894200000001, 0.11011894200000001]}, 'display_name': "~:0(<method 'popleft' of 'collections.deque' objects>)"}, '~:0(<built-in method fromkeys>)': {'children': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:398(__iter__)': [1515, 1515, 0.000384145, 0.0005058440000000001]}, 'stats': [3029, 3029, 0.144570842, 0.145076686], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:317(_accumulate_basic)': [1514, 1514, 0.07537568700000001, 0.07537568700000001], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [1514, 1514, 0.069120346, 0.06962417], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1, 1, 7.480900000000001e-05, 7.6829e-05]}, 'display_name': '~:0(<built-in method fromkeys>)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:317(_accumulate_basic)': {'children': {'~:0(<built-in method fromkeys>)': [1514, 1514, 0.07537568700000001, 0.07537568700000001], "~:0(<method 'pop' of 'list' objects>)": [2280108, 2280108, 0.07670381600000001, 0.07670381600000001]}, 'stats': [1514, 1514, 3.0752407820000003, 3.2273202850000002], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1514, 1514, 3.0752407820000003, 3.2273202850000002]}, 'display_name': 'betweenness.py:317(_accumulate_basic)'}, "~:0(<method 'append' of 'list' objects>)": {'children': {}, 'stats': [28383984, 28383984, 1.211568417, 1.211568417], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [28383984, 28383984, 1.211568417, 1.211568417]}, 'display_name': "~:0(<method 'append' of 'list' objects>)"}, "~:0(<method 'pop' of 'list' objects>)": {'children': {}, 'stats': [2280108, 2280108, 0.07670381600000001, 0.07670381600000001], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:317(_accumulate_basic)': [2280108, 2280108, 0.07670381600000001, 0.07670381600000001]}, 'display_name': "~:0(<method 'pop' of 'list' objects>)"}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:359(_rescale)': {'children': {}, 'stats': [1, 1, 9.1209e-05, 9.1209e-05], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1, 1, 9.1209e-05, 9.1209e-05]}, 'display_name': 'betweenness.py:359(_rescale)'}, "<class 'networkx.utils.decorators.argmap'> compilation 8:1(argmap_betweenness_centrality_5)": {'children': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1, 1, 0.151875921, 25.142294674000002], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/utils/misc.py:560(create_py_random_state)': [1, 1, 8.040000000000001e-06, 8.51e-06]}, 'stats': [1, 1, 7.202900000000001e-05, 25.142375213], 'callers': {'/opt/miniconda3/lib/python3.10/cProfile.py:106(runcall)': [1, 1, 7.202900000000001e-05, 25.142375213]}, 'display_name': "<class 'networkx.utils.decorators.argmap'> compilation 8:1(argmap_betweenness_centrality_5)"}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:338(adj)': {'children': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:44(__init__)': [2280108, 2280108, 0.187681964, 0.187681964]}, 'stats': [2280108, 2280108, 0.46546782900000006, 0.6531497930000001], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:452(__getitem__)': [2280108, 2280108, 0.46546782900000006, 0.6531497930000001]}, 'display_name': 'graph.py:338(adj)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:452(__getitem__)': {'children': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:338(adj)': [2280108, 2280108, 0.46546782900000006, 0.6531497930000001], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:81(__getitem__)': [2280108, 2280108, 0.640551965, 0.808212887]}, 'stats': [2280108, 2280108, 0.651913021, 2.113275701], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [2280108, 2280108, 0.651913021, 2.113275701]}, 'display_name': 'graph.py:452(__getitem__)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:1458(is_directed)': {'children': {}, 'stats': [1, 1, 3.4000000000000003e-07, 3.4000000000000003e-07], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1, 1, 3.4000000000000003e-07, 3.4000000000000003e-07]}, 'display_name': 'graph.py:1458(is_directed)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:44(__init__)': {'children': {}, 'stats': [4560216, 4560216, 0.355342886, 0.355342886], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:338(adj)': [2280108, 2280108, 0.187681964, 0.187681964], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:81(__getitem__)': [2280108, 2280108, 0.16766092200000002, 0.16766092200000002]}, 'display_name': 'coreviews.py:44(__init__)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:81(__getitem__)': {'children': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:44(__init__)': [2280108, 2280108, 0.16766092200000002, 0.16766092200000002]}, 'stats': [2280108, 2280108, 0.640551965, 0.808212887], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:452(__getitem__)': [2280108, 2280108, 0.640551965, 0.808212887]}, 'display_name': 'coreviews.py:81(__getitem__)'}, '/opt/miniconda3/lib/python3.10/cProfile.py:106(runcall)': {'children': {"<class 'networkx.utils.decorators.argmap'> compilation 8:1(argmap_betweenness_centrality_5)": [1, 1, 7.202900000000001e-05, 25.142375213], "~:0(<method 'enable' of '_lsprof.Profiler' objects>)": [1, 1, 2.7e-07, 2.7e-07], "~:0(<method 'disable' of '_lsprof.Profiler' objects>)": [1, 1, 7.8e-07, 7.8e-07]}, 'stats': [1, 1, 8.43e-06, 25.142384693], 'callers': {}, 'display_name': 'cProfile.py:106(runcall)'}, "~:0(<method 'enable' of '_lsprof.Profiler' objects>)": {'children': {}, 'stats': [1, 1, 2.7e-07, 2.7e-07], 'callers': {'/opt/miniconda3/lib/python3.10/cProfile.py:106(runcall)': [1, 1, 2.7e-07, 2.7e-07]}, 'display_name': "~:0(<method 'enable' of '_lsprof.Profiler' objects>)"}, "~:0(<method 'disable' of '_lsprof.Profiler' objects>)": {'children': {}, 'stats': [1, 1, 7.8e-07, 7.8e-07], 'callers': {'/opt/miniconda3/lib/python3.10/cProfile.py:106(runcall)': [1, 1, 7.8e-07, 7.8e-07]}, 'display_name': "~:0(<method 'disable' of '_lsprof.Profiler' objects>)"}};
+function sv_build_hierarchy(
+node_name, depth, max_depth, cutoff, node_time, parent_name, call_stack) {
+// track visited functions so we can avoid infinitely displaying
+// instances of recursion
+if (_.isUndefined(call_stack)) {
+var call_stack = Immutable.Set([node_name])
+} else {
+var call_stack = call_stack.add(node_name);
+};
+var data = {
+name: node_name,
+display_name: stats[node_name]['display_name'],
+time: node_time,
+cumulative: stats[node_name]['stats'][3],
+parent_name: parent_name
+};
+if (depth < max_depth && !_.isEmpty(stats[node_name]['children'])) {
+child_names = {};
+for (var child_name in stats[node_name]['children']) {
+// Cut off children that have already been visited (recursion)
+if (!call_stack.contains(child_name)) {
+child_names[child_name] = stats[node_name]['children'][child_name];
+}
+}
+// Normalize the child times.
+// Unfortunately, stats[child_name]['callers'][node_name][3] doesn't
+// give us the time that child spend under node in this instance, but
+// in all instances across the call tree. Yikes!
+// This may lead to unexpected behavior, e.g., the child times add up
+// to more than the node time. A normalization is necessary.
+var child_times = {};
+var total_children_time = 0.0;
+for (var child_name in child_names) {
+child_times[child_name] = stats[child_name]['callers'][node_name][3];
+total_children_time += child_times[child_name];
+}
+if (total_children_time > node_time) {
+for (var child_name in child_names) {
+child_times[child_name] *= (node_time / total_children_time);
+}
+}
+data['children'] = [];
+// recurse
+for (var child_name in child_names) {
+if (child_times[child_name]/node_time > cutoff) {
+data['children'].push(
+sv_build_hierarchy(
+child_name, depth+1, max_depth, cutoff,
+child_times[child_name], node_name, call_stack
+));
+}
+}
+// D3, the plotting framework, only accounts for times in the leaf
+// nodes. Hence, if the node_time exceeds the total time in its
+// children, we need to add another child node to account for the the
+// time spent in node itself.
+if (total_children_time < node_time) {
+data['children'].push({
+name: node_name,
+display_name: data['display_name'],
+parent_name: data['parent_name'],
+cumulative: stats[node_name]['stats'][3],
+time: node_time - total_children_time
+});
+}
+}
+return data;
+}
+self.onmessage = function (event) {
+// Try loading JS from CDN in case snakeviz server is off
+try {
+importScripts(
+"https://cdnjs.cloudflare.com/ajax/libs/immutable/3.8.1/immutable.min.js",
+"https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js");
+}
+// If the user is offline try loading from the SnakeViz server
+catch (e) {
+try {
+importScripts(
+event.data['url'] + "/static/vendor/immutable.min.js",
+event.data['url'] + "/static/vendor/lodash.min.js");
+}
+catch (e) {
+throw 'Could not load JS libraries in worker.';
+}
+}
+var depth = 0;
+var max_depth = event.data['depth'];
+var cutoff = event.data['cutoff'];
+var node_name = event.data['name'];
+var parent_name = event.data['parent_name'];
+var node_time = stats[node_name]['stats'][3];
+self.postMessage(JSON.stringify(
+sv_build_hierarchy(
+node_name, depth, max_depth, cutoff, node_time, parent_name
+)));
+};
+</script>
+<!-- Load SnakeViz JS Files -->
+<script src="nx_betweenness_files/snakeviz.js"></script>
+<script src="nx_betweenness_files/drawsvg.js"></script>
+<!-- Do initial setup stuff -->
+<script>
+// Initialize data
+$(document).ready(_.defer(function () {
+var profile_data = {'~:0(<built-in method builtins.isinstance>)': {'children': {}, 'stats': [2, 2, 4.7000000000000005e-07, 4.7000000000000005e-07], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/utils/misc.py:560(create_py_random_state)': [2, 2, 4.7000000000000005e-07, 4.7000000000000005e-07]}, 'display_name': '~:0(<built-in method builtins.isinstance>)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/utils/misc.py:560(create_py_random_state)': {'children': {'~:0(<built-in method builtins.isinstance>)': [2, 2, 4.7000000000000005e-07, 4.7000000000000005e-07]}, 'stats': [1, 1, 8.040000000000001e-06, 8.51e-06], 'callers': {"<class 'networkx.utils.decorators.argmap'> compilation 8:1(argmap_betweenness_centrality_5)": [1, 1, 8.040000000000001e-06, 8.51e-06]}, 'display_name': 'misc.py:560(create_py_random_state)'}, '~:0(<built-in method builtins.iter>)': {'children': {}, 'stats': [2283138, 2283138, 0.11899630000000001, 0.11899630000000001], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:398(__iter__)': [3030, 3030, 0.000258569, 0.000258569], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:50(__iter__)': [2280108, 2280108, 0.11873773100000001, 0.11873773100000001]}, 'display_name': '~:0(<built-in method builtins.iter>)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:398(__iter__)': {'children': {'~:0(<built-in method builtins.iter>)': [3030, 3030, 0.000258569, 0.000258569]}, 'stats': [3030, 3030, 0.000874848, 0.001133417], 'callers': {'~:0(<built-in method fromkeys>)': [1515, 1515, 0.000384145, 0.0005058440000000001], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [1514, 1514, 0.0004904730000000001, 0.000627253], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1, 1, 2.3000000000000002e-07, 3.2e-07]}, 'display_name': 'graph.py:398(__iter__)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:50(__iter__)': {'children': {'~:0(<built-in method builtins.iter>)': [2280108, 2280108, 0.11873773100000001, 0.11873773100000001]}, 'stats': [2280108, 2280108, 0.28816076900000004, 0.40689850000000005], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [2280108, 2280108, 0.28816076900000004, 0.40689850000000005]}, 'display_name': 'coreviews.py:50(__iter__)'}, '~:0(<built-in method builtins.len>)': {'children': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:430(__len__)': [1, 1, 9.000000000000001e-07, 1.2200000000000002e-06]}, 'stats': [1, 2, 1.3e-06, 2.2e-06], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1, 1, 9.800000000000001e-07, 2.2e-06], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:430(__len__)': [1, 1, 3.2e-07, 3.2e-07]}, 'display_name': '~:0(<built-in method builtins.len>)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': {'children': {'~:0(<built-in method builtins.len>)': [1, 1, 9.800000000000001e-07, 2.2e-06], '~:0(<built-in method fromkeys>)': [1, 1, 7.480900000000001e-05, 7.6829e-05], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:359(_rescale)': [1, 1, 9.1209e-05, 9.1209e-05], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:317(_accumulate_basic)': [1514, 1514, 3.0752407820000003, 3.2273202850000002], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [1514, 1514, 17.760158942, 21.762927570000002], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:398(__iter__)': [1, 1, 2.3000000000000002e-07, 3.2e-07], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:1458(is_directed)': [1, 1, 3.4000000000000003e-07, 3.4000000000000003e-07]}, 'stats': [1, 1, 0.151875921, 25.142294674000002], 'callers': {"<class 'networkx.utils.decorators.argmap'> compilation 8:1(argmap_betweenness_centrality_5)": [1, 1, 0.151875921, 25.142294674000002]}, 'display_name': 'betweenness.py:14(betweenness_centrality)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:430(__len__)': {'children': {'~:0(<built-in method builtins.len>)': [1, 1, 3.2e-07, 3.2e-07]}, 'stats': [1, 1, 9.000000000000001e-07, 1.2200000000000002e-06], 'callers': {'~:0(<built-in method builtins.len>)': [1, 1, 9.000000000000001e-07, 1.2200000000000002e-06]}, 'display_name': 'graph.py:430(__len__)'}, "~:0(<method 'append' of 'collections.deque' objects>)": {'children': {}, 'stats': [2278594, 2278594, 0.090655645, 0.090655645], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [2278594, 2278594, 0.090655645, 0.090655645]}, 'display_name': "~:0(<method 'append' of 'collections.deque' objects>)"}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': {'children': {"~:0(<method 'append' of 'collections.deque' objects>)": [2278594, 2278594, 0.090655645, 0.090655645], "~:0(<method 'popleft' of 'collections.deque' objects>)": [2280108, 2280108, 0.11011894200000001, 0.11011894200000001], '~:0(<built-in method fromkeys>)': [1514, 1514, 0.069120346, 0.06962417], "~:0(<method 'append' of 'list' objects>)": [28383984, 28383984, 1.211568417, 1.211568417], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:398(__iter__)': [1514, 1514, 0.0004904730000000001, 0.000627253], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:452(__getitem__)': [2280108, 2280108, 0.651913021, 2.113275701], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:50(__iter__)': [2280108, 2280108, 0.28816076900000004, 0.40689850000000005]}, 'stats': [1514, 1514, 17.760158942, 21.762927570000002], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1514, 1514, 17.760158942, 21.762927570000002]}, 'display_name': 'betweenness.py:256(_single_source_shortest_path_basic)'}, "~:0(<method 'popleft' of 'collections.deque' objects>)": {'children': {}, 'stats': [2280108, 2280108, 0.11011894200000001, 0.11011894200000001], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [2280108, 2280108, 0.11011894200000001, 0.11011894200000001]}, 'display_name': "~:0(<method 'popleft' of 'collections.deque' objects>)"}, '~:0(<built-in method fromkeys>)': {'children': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:398(__iter__)': [1515, 1515, 0.000384145, 0.0005058440000000001]}, 'stats': [3029, 3029, 0.144570842, 0.145076686], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:317(_accumulate_basic)': [1514, 1514, 0.07537568700000001, 0.07537568700000001], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [1514, 1514, 0.069120346, 0.06962417], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1, 1, 7.480900000000001e-05, 7.6829e-05]}, 'display_name': '~:0(<built-in method fromkeys>)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:317(_accumulate_basic)': {'children': {'~:0(<built-in method fromkeys>)': [1514, 1514, 0.07537568700000001, 0.07537568700000001], "~:0(<method 'pop' of 'list' objects>)": [2280108, 2280108, 0.07670381600000001, 0.07670381600000001]}, 'stats': [1514, 1514, 3.0752407820000003, 3.2273202850000002], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1514, 1514, 3.0752407820000003, 3.2273202850000002]}, 'display_name': 'betweenness.py:317(_accumulate_basic)'}, "~:0(<method 'append' of 'list' objects>)": {'children': {}, 'stats': [28383984, 28383984, 1.211568417, 1.211568417], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [28383984, 28383984, 1.211568417, 1.211568417]}, 'display_name': "~:0(<method 'append' of 'list' objects>)"}, "~:0(<method 'pop' of 'list' objects>)": {'children': {}, 'stats': [2280108, 2280108, 0.07670381600000001, 0.07670381600000001], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:317(_accumulate_basic)': [2280108, 2280108, 0.07670381600000001, 0.07670381600000001]}, 'display_name': "~:0(<method 'pop' of 'list' objects>)"}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:359(_rescale)': {'children': {}, 'stats': [1, 1, 9.1209e-05, 9.1209e-05], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1, 1, 9.1209e-05, 9.1209e-05]}, 'display_name': 'betweenness.py:359(_rescale)'}, "<class 'networkx.utils.decorators.argmap'> compilation 8:1(argmap_betweenness_centrality_5)": {'children': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1, 1, 0.151875921, 25.142294674000002], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/utils/misc.py:560(create_py_random_state)': [1, 1, 8.040000000000001e-06, 8.51e-06]}, 'stats': [1, 1, 7.202900000000001e-05, 25.142375213], 'callers': {'/opt/miniconda3/lib/python3.10/cProfile.py:106(runcall)': [1, 1, 7.202900000000001e-05, 25.142375213]}, 'display_name': "<class 'networkx.utils.decorators.argmap'> compilation 8:1(argmap_betweenness_centrality_5)"}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:338(adj)': {'children': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:44(__init__)': [2280108, 2280108, 0.187681964, 0.187681964]}, 'stats': [2280108, 2280108, 0.46546782900000006, 0.6531497930000001], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:452(__getitem__)': [2280108, 2280108, 0.46546782900000006, 0.6531497930000001]}, 'display_name': 'graph.py:338(adj)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:452(__getitem__)': {'children': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:338(adj)': [2280108, 2280108, 0.46546782900000006, 0.6531497930000001], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:81(__getitem__)': [2280108, 2280108, 0.640551965, 0.808212887]}, 'stats': [2280108, 2280108, 0.651913021, 2.113275701], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:256(_single_source_shortest_path_basic)': [2280108, 2280108, 0.651913021, 2.113275701]}, 'display_name': 'graph.py:452(__getitem__)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:1458(is_directed)': {'children': {}, 'stats': [1, 1, 3.4000000000000003e-07, 3.4000000000000003e-07], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/algorithms/centrality/betweenness.py:14(betweenness_centrality)': [1, 1, 3.4000000000000003e-07, 3.4000000000000003e-07]}, 'display_name': 'graph.py:1458(is_directed)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:44(__init__)': {'children': {}, 'stats': [4560216, 4560216, 0.355342886, 0.355342886], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:338(adj)': [2280108, 2280108, 0.187681964, 0.187681964], '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:81(__getitem__)': [2280108, 2280108, 0.16766092200000002, 0.16766092200000002]}, 'display_name': 'coreviews.py:44(__init__)'}, '/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:81(__getitem__)': {'children': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/coreviews.py:44(__init__)': [2280108, 2280108, 0.16766092200000002, 0.16766092200000002]}, 'stats': [2280108, 2280108, 0.640551965, 0.808212887], 'callers': {'/home/leonardo/.local/lib/python3.10/site-packages/networkx/classes/graph.py:452(__getitem__)': [2280108, 2280108, 0.640551965, 0.808212887]}, 'display_name': 'coreviews.py:81(__getitem__)'}, '/opt/miniconda3/lib/python3.10/cProfile.py:106(runcall)': {'children': {"<class 'networkx.utils.decorators.argmap'> compilation 8:1(argmap_betweenness_centrality_5)": [1, 1, 7.202900000000001e-05, 25.142375213], "~:0(<method 'enable' of '_lsprof.Profiler' objects>)": [1, 1, 2.7e-07, 2.7e-07], "~:0(<method 'disable' of '_lsprof.Profiler' objects>)": [1, 1, 7.8e-07, 7.8e-07]}, 'stats': [1, 1, 8.43e-06, 25.142384693], 'callers': {}, 'display_name': 'cProfile.py:106(runcall)'}, "~:0(<method 'enable' of '_lsprof.Profiler' objects>)": {'children': {}, 'stats': [1, 1, 2.7e-07, 2.7e-07], 'callers': {'/opt/miniconda3/lib/python3.10/cProfile.py:106(runcall)': [1, 1, 2.7e-07, 2.7e-07]}, 'display_name': "~:0(<method 'enable' of '_lsprof.Profiler' objects>)"}, "~:0(<method 'disable' of '_lsprof.Profiler' objects>)": {'children': {}, 'stats': [1, 1, 7.8e-07, 7.8e-07], 'callers': {'/opt/miniconda3/lib/python3.10/cProfile.py:106(runcall)': [1, 1, 7.8e-07, 7.8e-07]}, 'display_name': "~:0(<method 'disable' of '_lsprof.Profiler' objects>)"}};
+sv_json_cache = {};
+sv_worker = sv_make_worker();
+sv_root_func_name = sv_find_root(profile_data);
+sv_root_func_name__cached = sv_root_func_name;
+sv_call_stack = [sv_root_func_name];
+sv_total_time = profile_data[sv_root_func_name]['stats'][3];
+}));
+// Initialize the call stack button
+$(document).ready(_.defer(function () {
+sv_update_call_stack_list();
+sv_call_stack_btn_for_show();
+}));
+// Draw the visualization
+$(document).ready(_.defer(function () {
+sv_draw_vis(sv_root_func_name);
+}));
+</script>
+
+
+</body></html>
