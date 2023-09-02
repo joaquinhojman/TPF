@@ -1,5 +1,7 @@
 # TPF
-Trabajo practico profesional FIUBA
+Trabajo practico profesional FIUBA.
+
+NetworkX: https://github.com/networkx/networkx
 
 ## NetworkX performance related issues
 - Parallelization (proposed by jarrodmillman): https://github.com/networkx/networkx/issues/4064. Reading the issue, the idea is to parallelize using _pure python_ (so, no low level bindings if we plan to merge). Also, they would like the code to remain simple to read and to be agnostic (Dask, Ray, or else as parallel frameworks, any of those). Some of the main contributors have plans on working on an api for NX to provide parallelization without making the code a complicated mess.
