@@ -46,18 +46,7 @@ La capacidad de cargar y analizar grafos grandes es esencial en estas y muchas o
 
 ## Estado de Situacíon
 
-Some text
-
-```text
-folder1/
-└── folder2/
-    ├── folder3/
-    │   ├── file1
-    │   └── file2
-    └── folder4/
-        ├── file3
-        └── file4
-```
+En el contexto del análisis de grafos, NetworkX ha emergido como una de las bibliotecas más utilizadas y versátiles para Python. Su popularidad radica en su facilidad de uso y su amplia gama de algoritmos y herramientas que permiten a los científicos de datos, investigadores y profesionales de diversos campos analizar y comprender las relaciones y estructuras en los datos interconectados. Sin embargo, a medida que las aplicaciones del análisis de grafos se expanden para abordar conjuntos de datos más grandes y complejos, NetworkX se encuentra con ciertas limitaciones relacionadas con la carga y el manejo de grafos de gran tamaño.
 
 ## Objetivos
 
